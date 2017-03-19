@@ -103,19 +103,19 @@ function activate_list_rows(){
 					flag=0; prev_index=0;
 					$('.list').find('tr').eq(current_index+1).hide();
 					$('.list').find('tr').eq(current_index+2).hide();
-					$(this).closest('tr').find('div').css("background-image","url('../img/plus.png')");
+					$(this).closest('tr').find('div').css("background-image",'url("img/plus.png")');
 					$(this).closest('tr').find('img').css("border-color","#fff");
 				}
 				else { // выбран другой пользователь. Предыдущие строки с AdUsIn сворачиваются 
 					flag=1;
 					$('.list').find('tr').eq(prev_index+1).hide();
 					$('.list').find('tr').eq(prev_index+2).hide();	
-					$('.list').find('tr').eq(prev_index).find('div').css("background-image","url('../img/plus.png')");
+					$('.list').find('tr').eq(prev_index).find('div').css("background-image",'url("img/plus.png")');
 					$('.list').find('tr').eq(prev_index).find('img').css("border-color","#fff");
 					prev_index=current_index;
 					$('.list').find('tr').eq(current_index+1).show();
 					$('.list').find('tr').eq(current_index+2).show();
-					$(this).closest('tr').find('div').css("background-image","url('../img/minus.png')");
+					$(this).closest('tr').find('div').css("background-image",'url("img/minus.png")');
 					$(this).closest('tr').find('img').css("border-color","#83d4b2");
 				}
 			}
@@ -124,7 +124,7 @@ function activate_list_rows(){
 				prev_index=current_index; flag=1;
 				$('.list').find('tr').eq(current_index+1).show();
 				$('.list').find('tr').eq(current_index+2).show();
-				$(this).closest('tr').find('div').css("background-image","url('../img/minus.png')");
+				$(this).closest('tr').find('div').css("background-image",'url("img/minus.png")');
 				$(this).closest('tr').find('img').css("border-color","#83d4b2");
 			}
 		}
@@ -163,7 +163,7 @@ function setup_search_field(){
     		if(flag===1) { // если в момент поиска происходил просмотр пользователя
     			$('.list').find('tr').eq(prev_index+1).hide();
     			$('.list').find('tr').eq(prev_index+2).hide();
-    			$('.list').find('tr').eq(prev_index).find('div').css("background-image","url('../img/plus.png')");
+    			$('.list').find('tr').eq(prev_index).find('div').css("background-image",'url("img/plus.png")');
 				$('.list').find('tr').eq(prev_index).find('img').css("border-color","#fff");
 				flag=0;
     		}
